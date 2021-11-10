@@ -11,7 +11,7 @@ class LanguageRootQueries
         add_action(
             'graphql_register_types',
             [$this, '__action_graphql_register_types'],
-            10,
+            20,
             0
         );
     }

@@ -11,7 +11,7 @@ class PostObject
         add_action(
             'graphql_register_types',
             [$this, '__action_graphql_register_types'],
-            10,
+            20,
             0
         );
 
@@ -21,14 +21,14 @@ class PostObject
                 $this,
                 '__action_graphql_post_object_mutation_update_additional_data',
             ],
-            10,
+            20,
             4
         );
 
         add_filter(
             'graphql_map_input_fields_to_wp_query',
             [__NAMESPACE__ . '\\Helpers', 'map_language_to_query_args'],
-            10,
+            20,
             2
         );
 
@@ -38,7 +38,7 @@ class PostObject
         add_action(
             'graphql_resolve_field',
             [$this, '__action_is_translated_front_page'],
-            10,
+            20,
             8
         );
     }
