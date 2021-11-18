@@ -46,21 +46,21 @@ class OptionsPages
         add_filter(
             'graphql_RootQuery_fields',
             [self::class, '__action_graphql_RootQuery_fields'],
-            20,
+            50,
             1
         );
 
         add_action(
             'graphql_before_resolve_field',
             [self::class, '__action_graphql_before_resolve_field'],
-            20,
+            10,
             9
         );
 
         add_action(
             'graphql_after_resolve_field',
             [self::class, '__action_graphql_after_resolve_field'],
-            20,
+            10,
             9
         );
 

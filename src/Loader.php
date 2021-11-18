@@ -14,12 +14,12 @@ class Loader
 
     function bind_hooks()
     {
-        add_filter('pll_model', [$this, '__filter_pll_model'], 20, 1);
-        add_filter('pll_context', [$this, '__filter_pll_context'], 20, 1);
+        add_filter('pll_model', [$this, '__filter_pll_model'], 10, 1);
+        add_filter('pll_context', [$this, '__filter_pll_context'], 10, 1);
         add_filter(
             'get_user_metadata',
             [$this, '__filter_get_user_metadata'],
-            20,
+            10,
             4
         );
         add_action('graphql_init', [$this, '__action_graphql_init']);
@@ -138,9 +138,9 @@ class Loader
             return false;
         }
 
-        if (defined('GRAPHQL_POLYLANG_TESTS')) {
+       
             return true;
-        }
+        
 
         return is_graphql_http_request();
     }

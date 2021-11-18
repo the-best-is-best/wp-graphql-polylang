@@ -26,14 +26,14 @@ class MenuItem
         add_action(
             'graphql_register_types',
             [$this, '__action_graphql_register_types'],
-            20,
+            10,
             0
         );
 
         add_filter(
             'graphql_connection_query_args',
             [$this, '__filter_graphql_connection_query_args'],
-            20,
+            10,
             2
         );
     }

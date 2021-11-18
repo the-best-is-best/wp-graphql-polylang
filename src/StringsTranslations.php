@@ -9,7 +9,7 @@ class StringsTranslations
         add_action(
             'graphql_register_types',
             [$this, '__action_graphql_register_types'],
-            20,
+            10,
             0
         );
     }

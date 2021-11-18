@@ -11,21 +11,21 @@ class TermObject
         add_action(
             'graphql_register_types',
             [$this, '__action_graphql_register_types'],
-            20,
+            10,
             0
         );
 
         add_filter(
             'graphql_map_input_fields_to_get_terms',
             [__NAMESPACE__ . '\\Helpers', 'map_language_to_query_args'],
-            20,
+            10,
             2
         );
 
         add_filter(
             'graphql_term_object_insert_term_args',
             [$this, '__filter_graphql_term_object_insert_term_args'],
-            20,
+            10,
             2
         );
     }
@@ -93,7 +93,7 @@ class TermObject
                     pll_set_term_language($term_id, $default_lang);
                 }
             },
-            20,
+            10,
             2
         );
 
@@ -107,7 +107,7 @@ class TermObject
                     pll_set_term_language($term_id, $args['language']);
                 }
             },
-            20,
+            10,
             2
         );
 
